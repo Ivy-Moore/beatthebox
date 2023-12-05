@@ -93,6 +93,14 @@ func simulation() int {
 				}else if(randChoice == 1 && num > card[i]){
 					line[randIndex] = card[i]
 					card[i] = -1
+				} else if(randChoice == 0 && num > card[i]){
+					line = remove(line, randIndex)
+					indexOfLine--
+					card[i] = -1
+				}else if(randChoice == 1 && num < card[i]){
+					line = remove(line, randIndex)
+					indexOfLine--
+					card[i] = -1
 				} else {
 					line[randIndex] = card[i]
 					card[i] = -1
